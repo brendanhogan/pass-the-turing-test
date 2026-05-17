@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# raw game logs (large, easy to regenerate)
+games/
+*.log
+
+# only keep the plots + summary metrics from evolution, not the raw event dumps
+evolution/results.json

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pass The Turing Test</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">●</span>
+      <span class="brand-title">Pass The Turing Test</span>
+      <span class="brand-sub">a reality show</span>
+    </div>
+    <div class="status">
+      <div class="replay-controls" id="replay-controls" hidden>
+        <select id="replay-speed" class="speed-select" title="Replay speed">
+          <option value="1">1×</option>
+          <option value="2">2×</option>
+          <option value="4" selected>4×</option>
+          <option value="8">8×</option>
+          <option value="16">16×</option>
+        </select>
+        <button id="replay-btn" class="replay-btn">▶ REPLAY</button>
+      </div>
+      <span class="round-counter" id="round-counter">ROUND —</span>
+      <span class="phase-indicator" id="phase">CONNECTING</span>
+      <span class="live-indicator" id="live-indicator">
+        <span class="live-dot"></span>
+        <span id="live-label">LIVE</span>
+      </span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="contestants">
+      <div class="panel-label">CONTESTANTS</div>
+      <div class="agent-grid" id="agent-grid"></div>
+      <div class="legend">
+        click any name to open<br/>their subject file →
+      </div>
+    </aside>
+
+    <section class="feed">
+      <div class="panel-label">LIVE TRANSCRIPT</div>
+      <div class="chat-feed" id="chat-feed"></div>
+    </section>
+
+    <aside class="mind">
+      <div class="panel-label">SUBJECT FILE</div>
+      <div class="mind-content" id="mind-content">
+        <p class="hint">No subject selected.</p>
+        <p class="hint">Select a contestant from the left to read their<br/>private thoughts, suspicions, and voting record.</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
